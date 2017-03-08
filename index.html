@@ -17,7 +17,7 @@
 #panel, #flip {
     padding: 5px;
     text-align: center;
-    background-color:lightcyan;
+    background-color:lightskyblue;
     border: solid 1px black;
 }
 
@@ -27,8 +27,8 @@
 }
 
 img{
-    height: 350px;
-    width: 500px;
+    height: 550px;
+    width: 700px;
 }
 </style>
 
@@ -37,7 +37,7 @@ img{
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <h1>Which district has the highest income ?</h1>
 
                 <div id="flip">Click to show the map !</div>
@@ -46,7 +46,7 @@ img{
                 <script> 
 $(document).ready(function(){
     $("#flip").click(function(){
-        $("#panel").slideDown("slow");
+        $("#panel").slideToggle("slow");
     });
 });
 </script>
@@ -236,9 +236,23 @@ $(document).ready(function(){
                         });
                     });
                 </script>
+
+                <p><a href="https://www.hk01.com/article/74766" id="HK01">Reference</a></p>
+
+<button class="btn btn-info">Show Link</button>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        alert($("#HK01").attr("href"));
+    });
+});
+</script>
+
             </div>
         </div>
     </div>
+
 
     
 
