@@ -81,18 +81,23 @@ $(document).ready(function(){
 
              <div class="form-group">
                 <label for="income">Median monthly income per person :</label>
-                <input class="form-control" type="text" id="output" readonly>
+                <input class="form-control" type="text" id="answer" readonly>
             </div>
 
             <script>
-                    $(function() { 
-                        $('#submit').click(function() { 
-                            var district = $('#district').val();
-                            var income = district * "100";
-                            $('#total').val(total);
-                        });
-                    }); 
-                </script>
+             $(function() {
+            $('#submit').click(function() {
+                var index1 = $('#index1').val();
+                var index2 = $('#index2').val();
+                for (var i = 0; i < countArr.length; i++) {
+                    if (index1 == countArr[i].start && index2 == countArr[i].end) { //if (index1 == $countArr[i].start && index2 == $countArr[i].end{
+                        var answert = countArr[i].count;
+                        $('#answer').val("HK$" + answer);
+                    }
+                }
+            });
+        });
+</script>
 
                  <div>
                 <label for="income">Your median monthly income :</label>
@@ -135,10 +140,10 @@ $(document).ready(function(){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="amount">Amount of books</label>
-                            <input class="form-control" type="text" id="amount" value="3">
-                            <label for="unit">Unit price</label>
-                            <input class="form-control" type="text" id="unit" value="100">
+                            <label for="amount">Monthly Income :</label>
+                            <input class="form-control" type="text" id="earn">
+                            <label for="unit">Monthly Expenditure :</label>
+                            <input class="form-control" type="text" id="spend">
                         </div>
                     </div>
                 </div>
@@ -151,8 +156,8 @@ $(document).ready(function(){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="total">Total cost:</label>
-                            <input class="form-control" type="text" id="total">
+                            <label for="saving">Money saved per year:</label>
+                            <input class="form-control" type="text" id="saving">
                         </div>
                     </div>
                 </div>
@@ -161,60 +166,12 @@ $(document).ready(function(){
                         $('#calculate').click(function() { // Set the mouse click event hander for element "#calculate"
                             // Normal Javascript here
                             // Do whatever you want
-                            var amount = $('#amount').val();
-                            var unit = $('#unit').val();
-                            var total = amount * unit;
-                            $('#total').val(total);
+                            var earn = $('#earn').val();
+                            var spend = $('#spend').val();
+                            var saving = (earn-spend)*12;
+                            $('#saving').val(saving);
                         });
                     }); // Routine format; put all your jQuery initialisation inside
-                </script>
-
-                <h2> Batch execution </h2>
-                <style>
-                    correction {
-                        background-color: darkcyan;
-                        color: white;
-                    }
-                    
-                    .corrected {
-                        text-decoration: line-through;
-                        background-color: burlywood;
-                    }
-                </style>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>When you
-                            <original> writ</original>
-                            <correction style="display: none;">write</correction>
-                            <original> and</original>
-                            <correction style="display: none;">an</correction> article, it is easy to
-                            <original> made</original>
-                            <correction style="display: none;">make</correction> typos or grammar
-                            <original> mistake</original>
-                            <correction style="display: none;">mistakes</correction>.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button id="toggle" class="btn btn-primary">Toggle answer</button>
-                    </div>
-                </div>
-                <script>
-                    $(function() {
-                        var showCorrection = false;
-                        $('#toggle').click(function() {
-                            if (showCorrection) {
-                                $('correction').hide();
-                                $('original').removeClass('corrected');
-                                showCorrection = false;
-                            } else {
-                                $('correction').show();
-                                $('original').addClass('corrected');
-                                showCorrection = true;
-                            }
-                        });
-                        $('correction').hide();
-                    })
                 </script>
 
                 <h2>Move the bar chart in a batch</h2>
