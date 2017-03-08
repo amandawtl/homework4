@@ -239,11 +239,11 @@ $(document).ready(function(){
 
                 <p><a href="https://www.hk01.com/article/74766" id="HK01">Reference</a></p>
 
-<button class="btn btn-info">Show Link</button>
+<button class="btn btn-info" id="show">Show Link</button>
 
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
+    $("#show").click(function(){
         alert($("#HK01").attr("href"));
     });
 });
