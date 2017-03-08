@@ -13,6 +13,25 @@
 
     <title>Amanda Leung Homework 4</title>
 
+    <style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color:lightcyan;
+    border: solid 1px black;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+img{
+    height: 350px;
+    width: 500px;
+}
+</style>
+
 </head>
 
 <body>
@@ -20,7 +39,18 @@
         <div class="row">
             <div class="col-md-4">
                 <h1>Which district has the highest income ?</h1>
-                
+
+                <div id="flip">Click to show the map !</div>
+                <div id="panel"><img src="http://www.spatioepi.com/images/map_lib/index%20map/indexmap.jpg" /></div>
+
+                <script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+
                 <div>
                 <label>District :</label>
                 <select id="district">
@@ -55,10 +85,11 @@
             </div>
 
             <script>
-                    $(function() { /
-                        $('#submit').click(function() { /
-                            var district = "1";
-                            var income = "$17000";
+                    $(function() { 
+                        $('#submit').click(function() { 
+                            var district = $('#district').val();
+                            var income = district * "100";
+                            $('#total').val(total);
                         });
                     }); 
                 </script>
@@ -208,6 +239,8 @@
             </div>
         </div>
     </div>
+
+    
 
 </body>
 
