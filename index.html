@@ -17,8 +17,8 @@
 #panel, #flip {
     padding: 5px;
     text-align: center;
-    background-color:lightskyblue;
-    border: solid 1px black;
+    background-color:lightblue;
+    border: dashed 1px white;
 }
 
 #panel {
@@ -36,6 +36,11 @@ img{
 *{
     padding-left: 20px;
     padding-right: 20px;
+}
+
+div{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 </style>
@@ -181,46 +186,42 @@ $(document).ready(function(){
 </script>
 
                         </div>
-</div>
-</div>
 
-                <h2>Move the bar chart in a batch</h2>
-                <div class="row">
-                    <div class="col-md-12">
+<div class="col-md-6">
+                <h2>Make your wallet thicker</h2>
                         <div id="myfigure" class="chart">
-                            <div class="bar-block" style="height: 80px; left:5"> 80 </div>
-                            <div class="bar-block" style="height: 60px; left:45px"> 60 </div>
-                            <div class="bar-block" style="height: 90px; left:85px"> 90 </div>
-                            <div class="bar-block" style="height: 110px; left:125px"> 110 </div>
-                            <div class="bar-block" style="height: 20px; left:165px"> 20 </div>
+                            <div class="bar-block" style="width: 10px; left:50"></div>
+                          
                         </div>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-md-12 ">
-                        <button id="add" class="btn btn-primary "> Add Oil! </button>
-                    </div>
-                </div>
+
+                       <div>
+                        <button id="add" class="btn btn-primary "> more MONEY ! </button>
+                        </div>
+
+
                 <style>
                     .bar-block {
-                        background-color: #8286f4;
+                        background-color:sandybrown;
                         color: white;
-                        text-align: right;
-                        margin-top: 5px;
-                        margin-bottom: 5px;
+                        text-align: center;
+                        font-size: 50px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
                         position: absolute;
-                        width: 30px;
+                        height: 250px;
                         bottom: 0;
                     }
                     
                     .chart {
                         position: relative;
-                        width: 300px;
-                        height: 200px;
-                        border: 1px solid;
+                        width: 1300px;
+                        height: 300px;
+                        border: 1px solid white;
                         margin-bottom: 10px;
+                        
                     }
                 </style>
+
                 <script>
                     $(function() {
                         $('#add').click(function() {
@@ -228,16 +229,17 @@ $(document).ready(function(){
                             $('.bar-block').map(function() {
                                 // Note 2: $(this) refers to the current match element
                                 // Note 3: Deal with string/ number conversion
-                                $(this).text($(this).text() * 1 + 5);
+                                $(this).text($(this).text() * 1 + 50);
                                 // Note 4: Deal with the "px" unit in CSS property value
-                                var height_px = $(this).css('height');
-                                var height = height_px.substr(0, height_px.length - 2);
-                                $(this).css('height', (height * 1 + 5) + 'px');
+                                var width_px = $(this).css('width');
+                                var width = width_px.substr(0, width_px.length - 2);
+                                $(this).css('width', (width * 1 + 50) + 'px');
                             });
                         });
                     });
                 </script>
 
+<div class="col-md-12">
                 <p><a href="https://www.hk01.com/article/74766" id="HK01">Reference</a></p>
 
 <button class="btn btn-info" id="show">Show Link</button>
@@ -249,10 +251,10 @@ $(document).ready(function(){
     });
 });
 </script>
-
             </div>
         </div>
     </div>
+
 
 
     
