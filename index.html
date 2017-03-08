@@ -29,19 +29,27 @@
 img{
     height: 550px;
     width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+*{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
                 <h1>Which district has the highest income ?</h1>
 
                 <div id="flip">Click to show the map !</div>
-                <div id="panel"><img src="http://www.spatioepi.com/images/map_lib/index%20map/indexmap.jpg" /></div>
+                <div id="panel"><img  class="img-responsive" src="http://www.spatioepi.com/images/map_lib/index%20map/indexmap.jpg" /></div>
 
                 <script> 
 $(document).ready(function(){
@@ -50,7 +58,9 @@ $(document).ready(function(){
     });
 });
 </script>
+</div>
 
+            <div class="col-md-6">
                 <div>
                 <label>District :</label>
                 <select id="district">
@@ -99,21 +109,17 @@ $(document).ready(function(){
         });
 </script>
 
-                 <div>
                 <label for="income">Your median monthly income :</label>
                 <message> </message>
                 <input type="range" min="10000" max="20000" step="100" id="income">
-            </div>
+
            <div class="form-group">
                 <label for="headcount">Is your monthly income above average ?</label>
                 <input type="text" id="average" readonly="">
             </div>
 
-            <div>
                 <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" style="display: none" id="remove"></span>
                 <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style="display: none" id="ok"></span>
-            </div>
-        </div>
 
         <script>
         $(function() {
@@ -131,36 +137,25 @@ $(document).ready(function(){
             });
         });
         </script>
+        </div>
 
-
-
-
-
-
-                <div class="row">
-                    <div class="col-md-12">
+            <div class="col-md-6">
                         <div class="form-group">
                             <label for="amount">Monthly Income :</label>
                             <input class="form-control" type="text" id="earn">
                             <label for="unit">Monthly Expenditure :</label>
                             <input class="form-control" type="text" id="spend">
                         </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                    <div>
                         <button class="btn btn-primary" id="calculate">Calculate</button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
+
                         <div class="form-group">
                             <label for="saving">Money saved per year:</label>
                             <input class="form-control" type="text" id="saving">
                         </div>
-                    </div>
-                </div>
+
                 <script>
                     $(function() { // Routine format; put all your jQuery initialisation inside
                         $('#calculate').click(function() { // Set the mouse click event hander for element "#calculate"
@@ -173,6 +168,9 @@ $(document).ready(function(){
                         });
                     }); // Routine format; put all your jQuery initialisation inside
                 </script>
+                        </div>
+</div>
+</div>
 
                 <h2>Move the bar chart in a batch</h2>
                 <div class="row">
