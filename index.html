@@ -69,6 +69,7 @@ $(document).ready(function(){
                 <div>
                 <label>District :</label>
                 <select id="district">
+                    <option value="19">Choose your district</option>
                     <option value="1">Central and Western</option>
                     <option value="2">Eastern</option>
                     <option value="3">Southern</option>
@@ -83,7 +84,7 @@ $(document).ready(function(){
                     <option value="12">North</option>
                     <option value="13">Sai Kung</option>
                     <option value="14">Sha Tin</option>
-                    <option value="15">Sha Tin</option>
+                    <option value="15">Tai Po</option>
                     <option value="16">Tsuen Wan</option>
                     <option value="17">Tuen Mun</option>
                     <option value="18">Yuen Long</option>
@@ -91,28 +92,152 @@ $(document).ready(function(){
             </div>
 
             <div>
-                <button class="btn btn-primary" id="submit">Submit</button>
+                <button type="button" id="go" onclick="myFunction()">Let See!</button>
             </div>
 
-             <div class="form-group">
-                <label for="income">Median monthly income per person :</label>
-                <input class="form-control" type="text" id="answer" readonly>
-            </div>
+    <p class="none">Please choose your district</p>
+    <p class="CentralandWestern" style="display: none;">$17000</p>
+    <p class="Eastern" style="display: none;">$15000</p>
+    <p class="Southern" style="display: none;">$14500</p>
+    <p class="WanChai" style="display: none;">$15000</p>
+    <p class="ShamShuiPo" style="display: none;">$13500</p>
+    <p class="KowloonCity" style="display: none;">$15000</p>
+    <p class="KwunTong" style="display: none;">$13500</p>
+    <p class="WongTaiSin" style="display: none;">$14000</p>
+    <p class="YauTsimMong" style="display: none;">$14500</p>
+    <p class="Islands" style="display: none;">$15000</p>
+    <p class="KwaiTsing" style="display: none;">$13500</p>
+    <p class="North" style="display: none;">$14900</p>
+    <p class="SaiKung" style="display: none;">$16000</p>
+    <p class="ShaTin" style="display: none;">$15500</p>
+    <p class="TaiPo" style="display: none;">$15000</p>
+    <p class="TsuenWan" style="display: none;">$15380</p>
+    <p class="TuenMun" style="display: none;">$15000</p>
+    <p class="YuenLong" style="display: none;">$14500</p>
 
-            <script>
-             $(function() {
-            $('#submit').click(function() {
-                var index1 = $('#index1').val();
-                var index2 = $('#index2').val();
-                for (var i = 0; i < countArr.length; i++) {
-                    if (index1 == countArr[i].start && index2 == countArr[i].end) { //if (index1 == $countArr[i].start && index2 == $countArr[i].end{
-                        var answert = countArr[i].count;
-                        $('#answer').val("HK$" + answer);
-                    }
-                }
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#go').click(function() {
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".CentralandWestern").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".CentralandWestern").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".Eastern").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".Eastern").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".Southern").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".Southern").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".WanChai").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".WanChai").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".ShamShuiPo").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".ShamShuiPo").hide();
+                        }
+                    });
+                }).change();
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".KowloonCity").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".KowloonCity").hide();
+                        }
+                    });
+                }).change();
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".KwunTong").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".KwunTong").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".WongTaiSin").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".WongTaiSin").hide();
+                        }
+                    });
+                }).change();
+
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".none").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".none").hide();
+                        }
+                    });
+                }).change();
             });
+            $('p').hide();
         });
-</script>
+    </script>
+
+
+
+
+
+
+
+
+
+
 
                 <label for="income">Your median monthly income :</label>
                 <message> </message>
@@ -153,7 +278,7 @@ $(document).ready(function(){
                         </div>
 
                     <div>
-                        <button class="btn btn-primary" id="calculate">Calculate</button>
+                        <button class="btn btn-success" id="calculate">Calculate</button>
                     </div>
 
                         <div class="form-group">
@@ -195,7 +320,7 @@ $(document).ready(function(){
                         </div>
 
                        <div>
-                        <button id="add" class="btn btn-primary "> more MONEY ! </button>
+                        <button id="add" class="btn btn-info"> Get more MONEY ! </button>
                         </div>
 
 
@@ -242,7 +367,7 @@ $(document).ready(function(){
 <div class="col-md-12">
                 <p><a href="https://www.hk01.com/article/74766" id="HK01">Reference</a></p>
 
-<button class="btn btn-info" id="show">Show Link</button>
+<button class="btn btn-primary" id="show">Show Link</button>
 
 <script>
 $(document).ready(function(){
