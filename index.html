@@ -69,7 +69,7 @@ $(document).ready(function(){
                 <div>
                 <label>District :</label>
                 <select id="district">
-                    <option value="19">Choose your district</option>
+                    <option value="0">Choose your district</option>
                     <option value="1">Central and Western</option>
                     <option value="2">Eastern</option>
                     <option value="3">Southern</option>
@@ -92,28 +92,32 @@ $(document).ready(function(){
             </div>
 
             <div>
-                <button type="button" id="go" onclick="myFunction()">Let See!</button>
+                 <button class="btn btn-warning" id="go" onclick="myFunction()">Submit</button>
             </div>
 
-    <p class="none">Please choose your district</p>
-    <p class="CentralandWestern" style="display: none;">$17000</p>
-    <p class="Eastern" style="display: none;">$15000</p>
-    <p class="Southern" style="display: none;">$14500</p>
-    <p class="WanChai" style="display: none;">$15000</p>
-    <p class="ShamShuiPo" style="display: none;">$13500</p>
-    <p class="KowloonCity" style="display: none;">$15000</p>
-    <p class="KwunTong" style="display: none;">$13500</p>
-    <p class="WongTaiSin" style="display: none;">$14000</p>
-    <p class="YauTsimMong" style="display: none;">$14500</p>
-    <p class="Islands" style="display: none;">$15000</p>
-    <p class="KwaiTsing" style="display: none;">$13500</p>
-    <p class="North" style="display: none;">$14900</p>
-    <p class="SaiKung" style="display: none;">$16000</p>
-    <p class="ShaTin" style="display: none;">$15500</p>
-    <p class="TaiPo" style="display: none;">$15000</p>
-    <p class="TsuenWan" style="display: none;">$15380</p>
-    <p class="TuenMun" style="display: none;">$15000</p>
-    <p class="YuenLong" style="display: none;">$14500</p>
+             <div class="form-group">
+                <label for="income">Median monthly income per person :</label>
+            </div>
+
+    <p class="0">Please choose your district.</p>
+    <p class="1" style="display: none;">$17000</p>
+    <p class="2" style="display: none;">$15000</p>
+    <p class="3" style="display: none;">$14500</p>
+    <p class="4" style="display: none;">$15000</p>
+    <p class="5" style="display: none;">$13500</p>
+    <p class="6" style="display: none;">$15000</p>
+    <p class="7" style="display: none;">$13500</p>
+    <p class="8" style="display: none;">$14000</p>
+    <p class="9" style="display: none;">$14500</p>
+    <p class="10" style="display: none;">$15000</p>
+    <p class="11" style="display: none;">$13500</p>
+    <p class="12" style="display: none;">$14900</p>
+    <p class="13" style="display: none;">$16000</p>
+    <p class="14" style="display: none;">$15500</p>
+    <p class="15" style="display: none;">$15000</p>
+    <p class="16" style="display: none;">$15380</p>
+    <p class="17" style="display: none;">$15000</p>
+    <p class="18" style="display: none;">$14500</p>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -122,10 +126,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".CentralandWestern").not("." + optionValue).hide();
+                            $(".1").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".CentralandWestern").hide();
+                            $(".1").hide();
                         }
                     });
                 }).change();
@@ -134,10 +138,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".Eastern").not("." + optionValue).hide();
+                            $(".2n").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".Eastern").hide();
+                            $(".2").hide();
                         }
                     });
                 }).change();
@@ -146,10 +150,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".Southern").not("." + optionValue).hide();
+                            $(".3").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".Southern").hide();
+                            $(".3").hide();
                         }
                     });
                 }).change();
@@ -158,10 +162,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".WanChai").not("." + optionValue).hide();
+                            $(".4").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".WanChai").hide();
+                            $(".4").hide();
                         }
                     });
                 }).change();
@@ -170,10 +174,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".ShamShuiPo").not("." + optionValue).hide();
+                            $(".5").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".ShamShuiPo").hide();
+                            $(".5").hide();
                         }
                     });
                 }).change();
@@ -181,10 +185,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".KowloonCity").not("." + optionValue).hide();
+                            $(".6").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".KowloonCity").hide();
+                            $(".6").hide();
                         }
                     });
                 }).change();
@@ -192,10 +196,22 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".KwunTong").not("." + optionValue).hide();
+                            $(".7").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".KwunTong").hide();
+                            $(".7").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".8").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".8").hide();
                         }
                     });
                 }).change();
@@ -204,10 +220,118 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".WongTaiSin").not("." + optionValue).hide();
+                            $(".9").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".WongTaiSin").hide();
+                            $(".9").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".10").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".10").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".11").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $("11").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".12").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".12").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".13").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".13").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".14").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".14").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".15").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".15").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".16").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".16").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".17").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".17").hide();
+                        }
+                    });
+                }).change();
+
+                $("select").change(function() {
+                    $(this).find("option:selected").each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".18").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".18").hide();
                         }
                     });
                 }).change();
@@ -217,10 +341,10 @@ $(document).ready(function(){
                     $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
-                            $(".none").not("." + optionValue).hide();
+                            $(".0").not("." + optionValue).hide();
                             $("." + optionValue).show();
                         } else {
-                            $(".none").hide();
+                            $(".0").hide();
                         }
                     });
                 }).change();
@@ -228,11 +352,6 @@ $(document).ready(function(){
             $('p').hide();
         });
     </script>
-
-
-
-
-
 
 
 
@@ -365,9 +484,9 @@ $(document).ready(function(){
                 </script>
 
 <div class="col-md-12">
-                <p><a href="https://www.hk01.com/article/74766" id="HK01">Reference</a></p>
+                <p><a href="https://www.hk01.com/article/74766" id="HK01"></a></p>
 
-<button class="btn btn-primary" id="show">Show Link</button>
+<button class="btn btn-primary" id="show">Reference</button>
 
 <script>
 $(document).ready(function(){
