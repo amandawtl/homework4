@@ -92,7 +92,7 @@ $(document).ready(function(){
             </div>
 
             <div>
-                 <button class="btn btn-warning" id="go" onclick="myFunction()">Submit</button>
+                 <button class="btn btn-warning" id="submit" onclick="myFunction()">Submit</button>
             </div>
 
              <div class="form-group">
@@ -119,11 +119,12 @@ $(document).ready(function(){
     <p class="17" style="display: none;">$15000</p>
     <p class="18" style="display: none;">$14500</p>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#go').click(function() {
-                $("select").change(function() {
-                    $(this).find("option:selected").each(function() {
+    <script>
+
+                $(function() {
+                    $('#submit').click(function() {
+                        $("select").change(function() {
+                            $(this).find("option:selected").each(function() {
                         var optionValue = $(this).attr("value");
                         if (optionValue) {
                             $(".1").not("." + optionValue).hide();
@@ -354,10 +355,6 @@ $(document).ready(function(){
     </script>
 
 
-
-
-
-
                 <label for="income">Your median monthly income :</label>
                 <message> </message>
                 <input type="range" min="10000" max="20000" step="100" id="income">
@@ -406,16 +403,14 @@ $(document).ready(function(){
                         </div>
 
                 <script>
-                    $(function() { // Routine format; put all your jQuery initialisation inside
-                        $('#calculate').click(function() { // Set the mouse click event hander for element "#calculate"
-                            // Normal Javascript here
-                            // Do whatever you want
+                    $(function() { 
+                        $('#calculate').click(function() { 
                             var earn = $('#earn').val();
                             var spend = $('#spend').val();
                             var saving = (earn-spend)*12;
                             $('#saving').val(saving);
                         });
-                    }); // Routine format; put all your jQuery initialisation inside
+                    }); 
                 </script>
 
                 <script>
@@ -469,12 +464,8 @@ $(document).ready(function(){
                 <script>
                     $(function() {
                         $('#add').click(function() {
-                            // Note 1: map() method lets you execute a function on all matched elements
                             $('.bar-block').map(function() {
-                                // Note 2: $(this) refers to the current match element
-                                // Note 3: Deal with string/ number conversion
                                 $(this).text($(this).text() * 1 + 50);
-                                // Note 4: Deal with the "px" unit in CSS property value
                                 var width_px = $(this).css('width');
                                 var width = width_px.substr(0, width_px.length - 2);
                                 $(this).css('width', (width * 1 + 50) + 'px');
